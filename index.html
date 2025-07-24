@@ -3,36 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price calculator</title>
+    <title>DesignTool</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+  <header class="custom-header">
+    <div class="header-content">
+  
+      <div class="header-left">
+        <img src="imagens/logo.svg" alt="Logo" class="logo">
+      </div>
+  
+      <div class="header-right">
+        <a href="#" class="nav-link active">Valores</a>
+        <a href="#" class="nav-link">Prazos</a>
+        <a href="#" class="nav-link">Minhas propostas</a>
+        <button class="btn-outline">Entrar</button>
+        <button class="btn-solid">Cadastrar</button>
+      </div>
+  
+    </div>
+  </header>
+
   <div class="container">
     <div class="form-section">
   
-      <h2>Price calculator</h2>
-  
+      <div class="title-with-icon"> 
+       
+        <h2> Valores</h2>
+      </div>
+
+      <p class="overline"> Calcule o valor do projeto com base nos seus dados profissionais, o perfil do cliente e características do projeto!</p>
+      <div class="divider"></div>
+
+
       <!-- Seção: Sobre o Designer -->
+
       <div class="subsection">
-        <h3>Dados do Designer</h3>
+
+        <h3>1. Sobre você</h3>
   
         <div class="form-group">
-          <label for="senioridade">Senioridade</label>
+          <label for="senioridade">Qual seu nível de senioridade?</label>
           <select id="senioridade">
             <option>Selecione seu nível de senioridade</option>
+            <option value="iniciante"> Iniciante </option>
+            <option value="júnior"> Júnior </option>
+            <option value="pleno"> Pleno </option>
+            <option value="sênior"> Sênior </option>
           </select>
         </div>
   
         <div class="form-group">
-          <label for="horas-uteis">Horas Úteis</label>
-          <input type="text" id="horas-uteis" placeholder="Horas disponíveis no mês">
+          <label for="horas-uteis"> Quantas horas úteis você tem disponíveis no mês? </label>
+          <input type="text" id="horas-uteis" placeholder="0">
         </div>
   
         <div class="form-group">
-          <label for="custos-mensais">Custos Mensais</label>
-          <input type="text" id="custos-mensais" placeholder="Soma dos custos mensais (ex: 1000)">
+          <label for="custos-mensais"> Qual valor total dos seus custos mensais com trabalho? </label>
+          <input type="text" id="custos-mensais" placeholder="R$ 0,0">
         </div>
       </div>
 
@@ -40,48 +71,63 @@
   
       <!-- Seção: Sobre o Projeto -->
       <div class="subsection">
-        <h3>Dados do Projeto</h3>
+        <h3>2. Sobre o Projeto</h3>
   
         <div class="form-group">
-          <label for="perfil">Perfil do Cliente</label>
+          <label for="perfil">Quem é seu cliente?</label>
           <select id="perfil">
             <option>Selecione o perfil do cliente</option>
+            <option value="amigos"> Amigos ou família </option>
+            <option value="startups"> Startup </option>
+            <option value="empresas médias"> Empresas médias </option>
+            <option value="empresas grandes"> Empresas grandes </option>
           </select>
         </div>
   
         <div class="form-group">
-          <label for="regiao">Região</label>
+          <label for="regiao">Qual a localização do seu cliente?</label>
           <select id="regiao">
             <option>Selecione a região do cliente</option>
+            <option value="brasil"> Brasil </option>
+            <option value="eua"> EUA </option>
+            <option value="europa"> Europa </option>
           </select>
         </div>
   
         <div class="form-group">
-          <label for="complexidade">Complexidade</label>
+          <label for="complexidade">Qual nível de complexidade do projeto</label>
           <select id="complexidade">
-            <option>Selecione a complexidade do projeto</option>
+            <option>Selecione a complexidade</option>
+            <option value="baixa"> Baixa </option>
+            <option value="média"> Média </option>
+            <option value="grande"> Grande </option>
           </select>
         </div>
-  
-        <div class="form-group">
-          <label for="horas-estimadas">Horas Estimadas</label>
-          <input type="text" id="horas-estimadas" placeholder="Quantas horas o projeto exige?">
-        </div>
-      </div>
 
-      <div class="form-group">
-        <label for="margem">Margem de Lucro (%)</label>
-        <input type="text" id="margem" placeholder="Exemplo: 20%">
+        <div class="form-group">
+          <label for="horas-estimadas"> Quantas horas o projeto exige?</label>
+          <input type="text" id="horas-estimadas" placeholder="0">
+        </div>
+
+        <div class="form-group">
+          <label for="margem"> Qual margem de lucro deseja aplicar?</label>
+          <input type="text" id="margem" placeholder="0%">
+        </div>  
+
       </div>
-  
     </div>
 
      <!-- Resultado -->
   
     <div class="result-section">
+      
       <div class="resultado-calculo">
-        <h3>Resultado</h3>
-        <div class="value" id="valor-total">R$ 0,00</div>
+        
+        <div>
+          <h3>Resultado</h3>
+          <div class="value" id="valor-total">R$ 0,00</div>
+        </div>
+
         <div class="sub-values">
           <div>
             <strong id="valor-hora">R$ 0,00</strong><br>
@@ -92,24 +138,14 @@
             Horas estimadas
           </div>
         </div>
-        <button class="btn" id="btn-calcular">Calcular</button>
-      </div>
 
-      <div class="divider"></div>
-  
-      <!-- Histórico -->
-      <div class="resultado-historico">
-        <div class="history">
-          <h4>Histórico</h4>
-          <div id="history-list">
-          </div>
-          <div class="see-all">Ver tudo</div>
+        <div>
+          <button class="btn" id="btn-calcular">Calcular</button>
         </div>
-      </div>
-    </div>
-  </div>
-  
 
+      </div>  
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="java.js"></script>    
 </body>
 </html>

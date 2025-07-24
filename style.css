@@ -1,141 +1,247 @@
-/* style.css */
 * {
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    background-color: #0C1F57;
-    color: #1A1A1A;
-    padding: 40px;
-  }
-  .container {
-    display: flex;
-    max-width: 1080px;
-    margin: 0 auto;
-    background-color: #F9FAFC;
-    border-radius: 16px;
-    overflow: hidden;
-  }
-  .form-section {
-    flex: 1;
-    padding: 40px;
-  }
-  .form-section h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 24px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .form-group {
-    margin-bottom: 20px;
-  }
-  label {
-    font-size: 12px;
-    font-weight: 600;
-    color: #444;
-    display: block;
-    margin-bottom: 4px;
-  }
-  input, select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    background-color: #fff;
-    font-size: 14px;
-  }
-  .result-section {
-    width: 360px;
-    background-color: #f2f5fa;
-    padding: 40px;
-    border-left: 1px solid #E0E6F0;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
-  .resultado-calculo {
-    display: flex;
-    flex-direction: column;
-  }
-  .resultado-historico {
-    display: flex;
-    flex-direction: column;
-  }
-  .result-section h3 {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-  }
-  .value {
-    font-size: 32px;
-    font-weight: 700;
-    color: #5CE28A;
-    margin-bottom: 24px;
-  }
-  .sub-values {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 24px;
-  }
-  .sub-values div {
-    font-size: 14px;
-    color: #444;
-  }
-  .btn {
-    padding: 12px 24px;
-    background-color: #16256C;
-    color: #fff;
-    font-weight: 600;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .history {
-    margin-top: 0;
-  }
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-  .history h4 {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-  }
-  .history-item {
-    background-color: #E9EDF5;
-    padding: 12px;
-    border-radius: 6px;
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
-  .see-all {
-    text-align: right;
-    font-size: 14px;
-    margin-top: 8px;
-    color: #666;
-    cursor: pointer;
-  }
+body {
+  background-color: #0A0A23;
+  color: #F3F3F3;
+  padding-bottom: 80px;
+}
 
-  .divider {
-    height: 1px;
-    background-color: #ccc;
-    margin: 20px 0;
-    border: none;
-  }
-  
-  .subsection {
-    margin-bottom: 30px;
-  }
-  
-  .subsection h3 {
-    margin-bottom: 15px;
-    font-size: 14px;
-    font-weight: 600;
-    padding-bottom: 10px;
-    color: #666;
-    text-transform: uppercase;
-  }
+.container {
+  display: flex;
+  max-width: 1080px;
+  margin: 80px auto 0 auto;
+  background: linear-gradient(135deg, #111132, #0B0B28);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 0 24px rgba(128, 0, 255, 0.2);
+  border: 1px solid #33334D;
+}
+
+.form-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+.icon-1 {
+  width: 32px;
+  opacity: 70%;
+}
+
+.overline {
+  font-size: 14px;
+  font-weight: 300;
+  color: #9c9cc9;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form-section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #dedeed;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #9c9cc9;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #2E2E40;
+  border-radius: 10px;
+  background-color: #1A1A2F;
+  color: #efeff6;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #9A4DFF;
+  background-color: #1A1A2F;
+  outline: none;
+  color: #efeff6;
+}
+
+.result-section {
+  width:400px;
+  background: linear-gradient(135deg, #13132E, #1C1C40);
+  padding: 40px;
+  border-left: 1px solid #222240;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  color: #F3F3F3;
+}
+
+.resultado-calculo h3,
+.history h4 {
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  color: #9c9cc9;
+  text-transform: uppercase;
+}
+
+.value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #5CE28A;
+  margin-bottom: 24px;
+}
+
+.sub-values {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.sub-values div {
+  font-size: 14px;
+  color: #9c9cc9;
+}
+
+.btn {
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #AB68FF, #6DD6FF);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.divider {
+  height: 1px;
+  background: #33334D;
+  margin: 30px 0;
+  border: none;
+}
+
+.subsection {
+  margin-bottom: 40px;
+}
+
+.subsection h3 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  color: #9c9cc9;
+  text-transform: uppercase;
+}
+
+.custom-header {
+  background: #0A0A23;
+  height: 80px;
+  border-bottom: 1px solid #1F1F3D;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  position: relative;
+}
+
+.header-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-left h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo {
+  height: 28px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: #B0B0C0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #AB68FF;
+}
+
+.nav-link.active {
+  background-color: #1C1C40;
+  color: #AB68FF;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #AB68FF;
+  color: #AB68FF;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #1C1C40;
+}
+
+.btn-solid {
+  background: linear-gradient(135deg, #AB68FF, #6DD6FF);
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-solid:hover {
+  transform: scale(1.05);
+}
